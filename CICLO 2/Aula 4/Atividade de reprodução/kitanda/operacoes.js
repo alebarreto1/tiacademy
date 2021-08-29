@@ -1,12 +1,14 @@
 window.onload=function(){    
 
 /*Crio uma função anônima que irá autoexecutar-se. Quero que essa função traga os produtos.
-Ao trazer esses produtos quero que ela liste-os na id produtos.
+Ao trazer esses produtos quero que ela liste os mesmos na id produtos.
 Logo, preciso manipular a id #produtos*/
    
    (()=>{
     let mostrarProdutosCliente = document.querySelector("#content-produtos > ul#produtos");
-
+      
+//*Vou precisar executar um loop 'for', pois há uma quantidade de produtos que preciso listar.
+/É necessário passar o produto como parâmetro, em seguida, vou criar um índice para ler tais produtos*/ 
     for(let idx in produtos){
         mostrarProdutosCliente.innerHTML += `<li class="itemProduto" data-preco=${produtos[idx].prodPreco}>${produtos[idx].prodDesc}`        
     }
