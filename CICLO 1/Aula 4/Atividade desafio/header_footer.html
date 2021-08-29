@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	main {
+		width: 100vw;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		margin-top: 40px;
+		background-color: cyan;
+	}
+
+	header, footer {
+		background-color: tomato;
+		border-bottom: 1px solid black;
+		width: 100vw;
+		height: 40px;
+		position: fixed; /*position fixed: rodapé fixo; */
+	}
+
+	header {
+		top: 0;
+	}
+
+	footer {
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+		height: 80px;
+		bottom: 0; /* vai fazer o footer ficar "colado" na parte inferior*/
+	}
+
+	.text {
+		width: 40%;
+		height: auto;
+		font-size: 17px;
+		font-family: Arial, Verdana, sans-serif;
+		margin: 0 auto;
+		margin-top: 10.5vh;
+		margin-bottom: 15vh;
+	}
+
+	#square {
+		width: 20px;
+		height: 20px;
+		border: 1px solid black;
+		background-color: yellow;
+		display: flex;
+		position: fixed;
+		box-sizing: border-box;
+		bottom: 80px;
+		margin: 6px;
+		box-shadow: 3px 3px 3px black;
+	}
+
+	#square:hover {
+		cursor: pointer;
+		background-color: #000;
+	}
+
+	div {
+		width: 40%;
+		margin: auto;
+	}
+
+	@media screen and (max-width: 700px){
+		main > #square {
+			display: none;
+		}
+		main {
+			flex-direction: column;
+		}
+		#top{
+			margin-top: 10.5vh;
+		}
+		#bottom{
+			margin-bottom: 15vh;
+		}
+	}
+
+</style>
+<body>
+	<header></header>
+	<main>
+		<div class="text" id="top">
+			<p>
+				<strong>LoremLoremLorem</strong>, ipsum dolor sit, amet consectetur adipisicing elit. Praesentium consequuntur voluptates odio sed aspernatur distinctio cum nisi magni odit modi, ea iure dolor eos sapiente, eaque quas, non ipsa maiores.
+			</p>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus culpa nam officiis, nesciunt esse, voluptatem ullam explicabo beatae dolor expedita, neque possimus veniam deleniti porro quis adipisci unde nemo architecto.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, exercitationem, perspiciatis. Delectus, quam, voluptatibus? Quos et repellat cum eum eos. Quod cum ex obcaecati fugiat totam cupiditate, possimus. Sunt, nisi?	
+			</p>
+			<p>
+				Loremloremlorem, ipsum dolor sit, amet consectetur adipisicing elit. Praesentium consequuntur voluptates odio sed aspernatur distinctio cum nisi magni odit modi, ea iure dolor eos sapiente, eaque quas, non ipsa maiores.
+			</p>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus culpa nam officiis, nesciunt esse, voluptatem ullam explicabo beatae dolor expedita, neque possimus veniam deleniti porro quis adipisci unde nemo architecto.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, exercitationem, perspiciatis. Delectus, quam, voluptatibus? Quos et repellat cum eum eos. Quod cum ex obcaecati fugiat totam cupiditate, possimus. Sunt, nisi?	
+			</p>
+			<p>
+				Loremloremlorem, ipsum dolor sit, amet consectetur adipisicing elit. Praesentium consequuntur voluptates odio sed aspernatur distinctio cum nisi magni odit modi, ea iure dolor eos sapiente, eaque quas, non ipsa maiores.
+			</p>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus culpa nam officiis, nesciunt esse, voluptatem ullam explicabo beatae dolor expedita, neque possimus veniam deleniti porro quis adipisci unde nemo architecto.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, exercitationem, perspiciatis. Delectus, quam, voluptatibus? Quos et repellat cum eum eos. Quod cum ex obcaecati fugiat totam cupiditate, possimus. Sunt, nisi?	
+			</p>
+		</div>
+		
+		<div class="text" id="bottom">		
+			<p>
+				Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis quas eveniet praesentium voluptas modi natus obcaecati quibusdam voluptatem dolor quisquam sint nesciunt esse suscipit tenetur sequi, animi provident, laborum rerum.
+			</p>
+			<p>
+				Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Provident perspiciatis dolorum cum consequatur debitis qui. Quaerat alias, sed, perferendis repudiandae facilis soluta magnam adipisci architecto ex voluptates recusandae similique illo.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil reprehenderit labore doloremque, inventore deleniti consequatur veritatis, numquam, error corporis officiis ad quam ipsum eius sapiente consectetur atque nisi ea ipsumipsumipsum.
+			</p>
+			<p>
+				Loremloremlorem, ipsum dolor sit, amet consectetur adipisicing elit. Praesentium consequuntur voluptates odio sed aspernatur distinctio cum nisi magni odit modi, ea iure dolor eos sapiente, eaque quas, non ipsa maiores.
+			</p>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus culpa nam officiis, nesciunt esse, voluptatem ullam explicabo beatae dolor expedita, neque possimus veniam deleniti porro quis adipisci unde nemo architecto.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, exercitationem, perspiciatis. Delectus, quam, voluptatibus? Quos et repellat cum eum eos. Quod cum ex obcaecati fugiat totam cupiditate, possimus. Sunt, nisi?	
+			</p>
+			<p>
+				Loremloremlorem, ipsum dolor sit, amet consectetur adipisicing elit. Praesentium consequuntur voluptates odio sed aspernatur distinctio cum nisi magni odit modi, ea iure dolor eos sapiente, eaque quas, non ipsa maiores.
+			</p>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus culpa nam officiis, nesciunt esse, voluptatem ullam explicabo beatae dolor expedita, neque possimus veniam deleniti porro quis adipisci unde nemo architecto.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, exercitationem, perspiciatis. Delectus, quam, voluptatibus? Quos et repellat cum eum eos. Quod cum ex obcaecati fugiat totam cupiditate, possimus. <strong>IpsumIpsumIpsum</strong>	
+			</p>
+
+		</div>	
+			
+		<div id="square"></div>
+
+	</main>
+	<footer></footer>
+</body>
+</html>
