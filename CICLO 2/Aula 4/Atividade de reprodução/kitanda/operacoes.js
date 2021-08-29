@@ -1,6 +1,9 @@
 window.onload=function(){    
 
-//Produtos:
+/*Crio uma função anônima que irá autoexecutar-se. Quero que essa função traga os produtos.
+Ao trazer esses produtos quero que ela liste-os na id produtos.
+Logo, preciso manipular a id #produtos*/
+   
    (()=>{
     let mostrarProdutosCliente = document.querySelector("#content-produtos > ul#produtos");
 
@@ -9,8 +12,6 @@ window.onload=function(){
     }
    })(produtos) // (produtos) no final = auto executável - chama var = produtos do código produtos.js
 
-
-//                      COMPRA
 
 // percorre o elemento produtos e faz uma li.itemProduto item atributo
 const itemProduto = document.querySelectorAll("ul#produtos > li.itemProduto");
