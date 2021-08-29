@@ -7,8 +7,8 @@ Logo, preciso manipular a id #produtos*/
    (()=>{
     let mostrarProdutosCliente = document.querySelector("#content-produtos > ul#produtos");
       
-//*Vou precisar executar um loop 'for', pois há uma quantidade de produtos que preciso listar.
-/É necessário passar o produto como parâmetro, em seguida, vou criar um índice para ler tais produtos*/ 
+/*Vou precisar executar um loop 'for', pois há uma quantidade de produtos que preciso listar.
+É necessário passar o produto como parâmetro, em seguida, vou criar um índice para ler tais produtos*/ 
     for(let idx in produtos){
         mostrarProdutosCliente.innerHTML += `<li class="itemProduto" data-preco=${produtos[idx].prodPreco}>${produtos[idx].prodDesc}`        
     }
