@@ -10,7 +10,7 @@ window.onload = function () {
 
     const itemProduto = document.querySelectorAll("#produtos > li.itemProduto");
     const cestaCliente = document.querySelector("ul#cestaDoCliente");
-    const mostraTotalCompta = document.querySelector("#mostraTotalCompra");
+    const mostraTotalCompra = document.querySelector("#mostraTotalCompra");
     const armazenaItens = [];
     var totalPedido = 0;
 
@@ -31,7 +31,7 @@ window.onload = function () {
                 armazenaItens.push(item.textContent);
                 cestaCliente.appendChild(li).textContent = item.textContent;
                 totalPedido += Number(item.dataset.preco);
-                mostraTotalCompta.value = totalPedido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                mostraTotalCompra.value = totalPedido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
             } else {
                 alert(`Este item ${item.textContent} já esta na sua cesta!`);
@@ -54,7 +54,7 @@ window.onload = function () {
 
                 cestaCliente.removeChild(list.childNodes[idx]);
                 armazenaItens.splice(idx, 1);
-                mostraTotalCompta.value = totalPedido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                mostraTotalCompra.value = totalPedido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
             }
         });
     });
