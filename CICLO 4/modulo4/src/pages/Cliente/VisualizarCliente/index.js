@@ -56,7 +56,7 @@ export const VisualizarCliente = () => {
                                 <td>{item.uf}</td>
                                 <td>{item.nascimento}</td>
                                 <td className="text-center">
-                                    <Link to={"/cliente/" + item.id}
+                                    <Link to={"/cliente/"+item.id}
                                         className="btn btn-outline-primary btn-sm">Consultar</Link>
                                 </td>
                             </tr>
