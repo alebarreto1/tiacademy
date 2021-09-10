@@ -37,11 +37,11 @@ export const Pedido = (props) => {
                     </div>
                 </div>
                 <dl className="row">
-                    <dt className="col-sm-3">ID:Cliente</dt>
+                    <dt className="col-sm-3">ID do Cliente</dt>
                     <dd className="col-sm-9">{data.ClienteId}</dd>
                 </dl>
                 <dl className="row">
-                    <dt className="col-sm-3">ID:Servico</dt>
+                    <dt className="col-sm-3">ID do Servico</dt>
                     <dd className="col-sm-9">{data.ServicoId}</dd>
                 </dl>
                 <dl className="row">

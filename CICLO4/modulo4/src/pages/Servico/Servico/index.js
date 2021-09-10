@@ -8,7 +8,7 @@ export const Servico = (props) => {
     console.log(props.match.params.id);
 
     const [data, setData] = useState([]);
-    const [id, setID] = useState(props.match.params.id);
+    const [id] = useState(props.match.params.id);
 
     useEffect(() => {
         const getServico = async () => {
@@ -18,7 +18,7 @@ export const Servico = (props) => {
                     setData(response.data.servico);
                 })
                 .catch(() => {
-                    console.log("Erro: Não foi possível conectar a API.")
+                    console.log("Erro:Não foi possível conectar a API.")
                 })
         }
         getServico();
@@ -29,22 +29,29 @@ export const Servico = (props) => {
             <Container>
                 <div className="d-flex">
                     <div className="mr-auto p-2">
-                        <h1>Informações do Serviço</h1>
+                        <h1>Quantidade de pedidos do serviço</h1>
                     </div>
                     <div className="p-2">
                         <Link to="/visualizarservico"
-                            className="btn btn-outline-primary btn-sm">Serviços</Link>
+                            className="btn btn-outline-primary btn-sm">Listar
+                        </Link>
+                        <Link to={"/editarservico/" + data.id}
+                            className="btn btn-outline-warning btn-sm">Editar</Link>
                     </div>
                 </div>
-                <dl className="row">
-                            <dt className="col-sm-3">Nome</dt>
-                            <dd className="col-sm-9">{data.nome}</dd>
-                        </dl>
-                        <dl className="row">
-                            <dt className="col-sm-3">Descrição</dt>
-                            <dd className="col-sm-9">{data.descricao}</dd>
-                        </dl>
+                <div>
+                    <dl className="row pt-3">
+                        <dt className="col-sm-3">Nome</dt>
+                        <dd className="col-sm-9">{data.nome}</dd>
+                    </dl>
+                    <dl className="row">
+                        <dt className="col-sm-3">Descrição</dt>
+                        <dd className="col-sm-9">{data.descricao}</dd>
+                    </dl>
+                </div>
+
             </Container>
         </div>
+
     )
 }

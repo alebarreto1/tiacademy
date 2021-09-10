@@ -27,6 +27,26 @@ export const VisualizarCliente = () => {
             });
     }
 
+    const apagarCliente = async (idCliente) => {
+        console.log(idCliente);
+
+        const headers = {
+            'Content-Type': 'application/json'
+        }
+
+        await axios.delete(api + "/apagarcliente/" + idCliente, { headers })
+            .then((response) => {
+                console.log(response.data.error);
+                getClientes();
+            })
+            .catch(() => {
+                setStatus({
+                    type: 'error',
+                    message: 'Erro: Não foi possível acessar a API.'
+                });
+            });
+    }
+
     useEffect(() => {
         getClientes();
     }, []);
@@ -35,6 +55,15 @@ export const VisualizarCliente = () => {
         <div className="p-3">
             <Container>
                 {status.type === 'error' ? <Alert color="danger">{status.message}</Alert> : ""}
+                <div className="d-flex">
+                    <div className="mr-auto p-2">
+                        <h3>Informações do Cliente</h3>
+                    </div>
+                    <div className="p-2">
+                        <Link to="/cadastrarcliente"
+                            className="btn btn-outline-primary btn-sm">Cadastrar</Link>
+                    </div>
+                </div>
                 <Table striped>
                     <thead>
                         <tr>
@@ -58,6 +87,10 @@ export const VisualizarCliente = () => {
                                 <td className="text-center">
                                     <Link to={"/cliente/" + item.id}
                                         className="btn btn-outline-primary btn-sm">Consultar</Link>
+                                    <Link to={"/editarcliente/" + item.id}
+                                        className="btn btn-outline-secondary btn-sm m-1">Editar</Link>
+                                    <span className="btn btn-outline-danger btn-sm m-1"
+                                        onClick={() => apagarCliente(item.id)}>Excluir</span>
                                 </td>
                             </tr>
                         ))}

@@ -12,14 +12,17 @@ export const Cliente = (props) => {
 
     useEffect(() => {
         const getCliente = async () => {
+            console.log(api + "/cliente/" + id)
             await axios.get(api + "/cliente/" + id)
                 .then((response) => {
                     console.log(response.data.cliente);
                     setData(response.data.cliente);
+                    console.log(api + "/cliente/" + id)
                 })
                 .catch(() => {
                     console.log("Erro: Não foi possível conectar a API.")
                 })
+
         }
         getCliente();
     }, [id]);
@@ -33,29 +36,34 @@ export const Cliente = (props) => {
                     </div>
                     <div className="p-2">
                         <Link to="/visualizarcliente"
-                            className="btn btn-outline-primary btn-sm">Clientes</Link>
+                            className="btn btn-outline-primary btn-sm">Clientes
+                        </Link>
                     </div>
                 </div>
-                <dl className="row">
-                    <dt className="col-sm-3">Nome</dt>
-                    <dd className="col-sm-9">{data.nome}</dd>
-                </dl>
-                <dl className="row">
-                    <dt className="col-sm-3">Endereço</dt>
-                    <dd className="col-sm-9">{data.endereco}</dd>
-                </dl>
-                <dl className="row">
-                    <dt className="col-sm-3">Cidade</dt>
-                    <dd className="col-sm-9">{data.cidade}</dd>
-                </dl>
-                <dl className="row">
-                    <dt className="col-sm-3">UF</dt>
-                    <dd className="col-sm-9">{data.uf}</dd>
-                </dl>
-                <dl className="row">
-                    <dt className="col-sm-3">Nascimento</dt>
-                    <dd className="col-sm-9">{data.nascimento}</dd>
-                </dl>
+                <div>
+                    <dl className="row">
+                        <dt className="col-sm-3">Nome</dt>
+                        <dd className="col-sm-9">{data.nome}</dd>
+                    </dl>
+                    <dl className="row">
+                        <dt className="col-sm-3">Endereço</dt>
+                        <dd className="col-sm-9">{data.endereco}</dd>
+                    </dl>
+                    <dl className="row">
+                        <dt className="col-sm-3">Cidade</dt>
+                        <dd className="col-sm-9">{data.cidade}</dd>
+                    </dl>
+                    <dl className="row">
+                        <dt className="col-sm-3">UF</dt>
+                        <dd className="col-sm-9">{data.uf}</dd>
+                    </dl>
+                    <dl className="row">
+                        <dt className="col-sm-3">Nascimento</dt>
+                        <dd className="col-sm-9">{data.nascimento}</dd>
+                    </dl>
+
+                </div>
+
             </Container>
         </div>
     )
